@@ -36,9 +36,9 @@ strong {
   gap: 1.7em;
   padding-top: 2em;
   grid-template-columns: 2em auto 1fr 2em;
-  grid-template-rows: 1em 1.2em 2em 0 1fr;
+  grid-template-rows: auto auto auto 0 1fr;
   grid-template-areas:
-    ". . . . "
+    ". img . . "
     ". img location . "
     ". img title . "
     ". img time . "
@@ -57,7 +57,6 @@ strong {
   grid-area: img;
   max-width: 250px;
   max-height: 400px;
-  background: red;
   height: 100%;
   border-radius: 12px;
 }
@@ -67,7 +66,7 @@ strong {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 .cards--location svg {
@@ -79,7 +78,7 @@ strong {
 
 .cards--title {
   grid-area: title;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 .cards--time {
