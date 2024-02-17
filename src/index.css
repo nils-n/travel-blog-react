@@ -99,3 +99,37 @@ strong {
   margin-top: 2em;
   border-bottom: 2px solid #f5f5f5;
 }
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .cards--container {
+    display: grid;
+    gap: 1.7em;
+    padding-top: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    grid-template-columns: 2em auto 2em;
+    grid-template-rows: 1em minmax(200px, 1fr) 1.1em 1.4em 0;
+    grid-template-areas:
+      ". . . "
+      ". img  . "
+      ". location . "
+      ". title . "
+      ". time . "
+      ". text . "
+      " . bar .";
+  }
+
+  .cards--img-container {
+    grid-area: img;
+    max-width: 350px;
+    max-height: 300px;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .cards--title {
+    grid-area: title;
+    font-size: 1.8rem;
+  }
+}
