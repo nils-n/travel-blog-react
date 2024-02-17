@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  display: flex;
+  background: #f55a5a;
+  min-height: 55px;
+  align-items: center;
+  gap: 0.4em;
+  color: white;
+  justify-content: center;
+}
+
+/*General Styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  margin: 0;
+  padding: 0;
+}
+
+/* Card Component */
+.cards--container {
+  display: grid;
+  gap: 1.7em;
+  padding-top: 2em;
+  grid-template-columns: 2em auto 1fr 2em;
+  grid-template-rows: 1em 1.2em 2em 0 1fr;
+  grid-template-areas:
+    ". . . . "
+    ". img location . "
+    ". img title . "
+    ". img time . "
+    ". img text . "
+    " . bar bar .";
+}
+
+.cards--img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cards--img-container {
+  grid-area: img;
+  max-width: 250px;
+  max-height: 400px;
+  background: red;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.cards--location {
+  grid-area: location;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cards--location svg {
+  width: 20px;
+  height: 20px;
+  color: #f55a5a;
+  padding-right: 0.25em;
+}
+
+.cards--title {
+  grid-area: title;
+  font-size: 1.6rem;
+}
+
+.cards--time {
+  grid-area: time;
+  color: #2b283a;
+}
+.cards--text {
+  margin: 0.1em;
+  grid-area: text;
+  max-width: 40ch;
+  line-height: 1.5;
+  color: #2b283a;
+}
+
+.cards--separator {
+  grid-area: bar;
+  margin-top: 2em;
+  border-bottom: 2px solid #f5f5f5;
+}
