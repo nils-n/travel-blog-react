@@ -33,10 +33,10 @@ strong {
 /* Card Component */
 .cards--container {
   display: grid;
-  gap: 1.7em;
+  gap: 0.5em 1.7em;
   padding-top: 2em;
   grid-template-columns: 2em auto 1fr 2em;
-  grid-template-rows: auto auto auto 0 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-template-areas:
     ". img . . "
     ". img location . "
@@ -67,6 +67,9 @@ strong {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
 }
 
 .cards--location svg {
@@ -79,6 +82,7 @@ strong {
 .cards--title {
   grid-area: title;
   font-size: 1.9rem;
+  padding-bottom: 0.5em;
 }
 
 .cards--time {
